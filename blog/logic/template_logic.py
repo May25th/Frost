@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.template.loader import get_template
 from django.shortcuts import render_to_response
 from django.conf import settings
+import time
 __author__ = 'May25th'
 
 
@@ -29,6 +30,15 @@ def test_template_old2(request):
     return HttpResponse(html)
 
 
-def test_template(request):
+def test_template_old3(request):
     # 更简单的实现
     return render_to_response('moban.html', {'mark': 'Too Young'})
+
+
+def test_template(request):
+    # 更简单的实现
+    data = {
+        'title': 'test moban',
+        'current_date': time.time(),
+    }
+    return render_to_response('current_time.html', locals())
