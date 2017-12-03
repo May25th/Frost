@@ -14,5 +14,5 @@ def check(request):
 
 def test_template(request):
     t = get_template('moban.html')
-    html = t.render(Context({'mark': 'BMW'}))
+    html = t.render(Context({'mark': 'Car'}))
     return HttpResponse(html)
