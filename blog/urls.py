@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^check/$', template_logic.check),
     url(r'^test_template/$', template_logic.test_template),
     url(r'^add_book/$', book_logic.add_book),
+    url(r'^get_book_list/$', book_logic.get_book_list),
 ]
