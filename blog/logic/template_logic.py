@@ -38,7 +38,6 @@ def test_template_old3(request):
 def test_template(request):
     # 更简单的实现
     data = {
-        'title': 'test moban',
         'current_date': time.time(),
     }
-    return render_to_response('current_time.html', locals())
+    return render_to_response('current_time.html', data)
