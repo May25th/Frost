@@ -2,6 +2,7 @@
 from django.template import Template, Context
 from django.http import HttpResponse
 from django.template.loader import get_template
+from django.shortcuts import render_to_response
 from django.conf import settings
 __author__ = 'May25th'
 
@@ -21,8 +22,13 @@ def test_template_old(request):
     return HttpResponse(html)
 
 
-def test_template(request):
+def test_template_old2(request):
     t = get_template('moban.html')
     # 版本不一样 语法不一样
     html = t.render({'mark': 'BMW'})
     return HttpResponse(html)
+
+
+def test_template(request):
+    # 更简单的实现
+    return render_to_response('moban.html', {'mark': 'Too Young'})
