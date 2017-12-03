@@ -4,6 +4,7 @@ __author__ = 'May25th'
 
 
 def check(request):
-    print('check logic')
-    html = 'check logic html'
+    t = Template('My name is {{ name }}.')
+    c = Context({'name': 'May25th'})
+    html = t.render(c)
     return HttpResponse(html)
