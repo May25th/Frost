@@ -12,10 +12,16 @@ def check(request):
     return HttpResponse(html)
 
 
+def test_template_old(request):
+    fp = open(settings.BLOG_TEMPLATE_DIR + 'test.html')
+    t = get_template(fp.read())
+    fp.close()
+    html = t.render(Context({'mark': 'BMW'}))
+    return HttpResponse(html)
+
+
 def test_template(request):
     t = get_template('moban.html')
-    if t:
-        html = t.render(Context({'mark': 'Car'}))
-    else:
-        html = 'Empty'
+    # 版本不一样 语法不一样
+    html = t.render({'mark': 'BMW'})
     return HttpResponse(html)
