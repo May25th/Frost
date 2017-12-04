@@ -7,5 +7,6 @@ class Article(models.Model):
     author = models.IntegerField(),
     name = models.CharField(max_length=64)
     text = models.TextField()
-    timestamp = models.DateTimeField(default=timezone.now)
+    create_at = models.DateTimeField(auto_now_add=True)
+    modify_at = models.DateTimeField(auto_now=True)
 
