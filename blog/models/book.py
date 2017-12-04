@@ -6,5 +6,6 @@ from django.utils import timezone
 class Book(models.Model):
     t_id = models.CharField(max_length=32, unique=True),
     name = models.CharField(max_length=64)
-    timestamp = models.DateTimeField(default=timezone.now)
+    tip = models.CharField(max_length=64)
+    # timestamp = models.DateTimeField(default=timezone.now)
 
