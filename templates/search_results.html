@@ -11,7 +11,7 @@
     <p>Found {{ books|length }} book{{ books|pluralize }}.</p>
     <ul>
         {% for book in books %}
-        <li>{{ book.title }}</li>
+        <li>{{ book.name }}</li>
         {% endfor %}
     </ul>
 {% else %}
