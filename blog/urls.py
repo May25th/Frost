@@ -15,4 +15,6 @@ urlpatterns = [
     url(r'^current_url_view_good/$', form_logic.current_url_view_good),
     url(r'^ua_display/$', form_logic.ua_display),
     url(r'^display_meta/$', form_logic.display_meta),
+    url(r'^search-form/$', form_logic.search_form),
+    url(r'^search/$', form_logic.search),
 ]
