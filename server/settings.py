@@ -82,9 +82,9 @@ DATABASES = {
         'PASSWORD': 'Bellcat2017',
         'HOST': 'bj-cdb-qgy7vin9.sql.tencentcdb.com',
         'PORT': '63891',
-	'OPTIONS':{
-		"init_command" : "SET sql_mode='STRICT_TRANS_TABLES'"
-		}
+        'OPTIONS': {
+            "init_command": "SET sql_mode='STRICT_TRANS_TABLES'"
+            }
     }
 }
 
