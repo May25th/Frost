@@ -7,7 +7,7 @@ class Book(models.Model):
     author = models.IntegerField(),
     name = models.CharField(max_length=64)
     classify = models.SmallIntegerField(default=0)
-    tip = models.CharField(max_length=64)
+    tip = models.CharField(max_length=64, default='')
     create_at = models.DateTimeField(auto_now_add=True)
     modify_at = models.DateTimeField(auto_now=True)
 
